@@ -1,0 +1,11 @@
+/* Empty. Add your own CSS if you like */
+.body  {
+    background-image: url("../img/catscannerback.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
