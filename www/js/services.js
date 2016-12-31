@@ -1,47 +1,47 @@
 angular.module('starter.services', [])
 
-.factory('Chats', function() {
+.factory('Meows', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var chats = [{
+  var meows = [{
     id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
+    name: 'Rock',
+    lastText: 'Meow?',
     face: 'img/ben.png'
   }, {
     id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
+    name: 'Angelica',
+    lastText: 'Meow meow meow',
     face: 'img/max.png'
   }, {
     id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
+    name: 'Erin',
+    lastText: 'Meowwwwwww',
     face: 'img/adam.jpg'
   }, {
     id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
+    name: 'Cherry',
+    lastText: 'MEOW!!!',
     face: 'img/perry.png'
   }, {
     id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
+    name: 'Jenny',
+    lastText: 'Meowwwww!!!???',
     face: 'img/mike.png'
   }];
 
   return {
     all: function() {
-      return chats;
+      return meows;
     },
     remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
+      meows.splice(meows.indexOf(chat), 1);
     },
     get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
+      for (var i = 0; i < meows.length; i++) {
+        if (meows[i].id === parseInt(chatId)) {
+          return meows[i];
         }
       }
       return null;
