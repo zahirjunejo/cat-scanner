@@ -50,6 +50,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.newcat',{
+    url:'/newcat',
+    views:{
+       'tab-newcat':{
+          templateUrl:'templates/tab-new-cat.html',
+          controller:'NewCatCtrl'
+       }
+    }
+  })
+
   .state('tab.chats', {
       url: '/chats',
       views: {

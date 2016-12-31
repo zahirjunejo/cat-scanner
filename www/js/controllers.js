@@ -20,7 +20,7 @@ angular.module('starter.controllers', [])
 .controller('ChatDetailCtrl', function($scope, $stateParams, Meows) {
   $scope.chat = Meows.get($stateParams.chatId);
 })
-.controller('NewCat', function($scope, Meows) {
+.controller('NewCatCtrl', function($scope, Meows) {
 // This is my first controller for ionic
 
 })
