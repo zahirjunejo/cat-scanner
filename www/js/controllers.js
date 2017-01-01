@@ -1,6 +1,15 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope) {
+  $scope.style="body white";
+  $scope.changeTextColor = () =>{
+     if($scope.style == "body white"){
+      $scope.style = "body yellow";
+     }else{
+      $scope.style = "body white";
+     } 
+  }
+})
 
 .controller('ChatsCtrl', function($scope, Meows) {
   // With the new view caching in Ionic, Controllers are only called
