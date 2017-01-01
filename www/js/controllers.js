@@ -25,6 +25,10 @@ angular.module('starter.controllers', [])
 
   $scope.addCat = function(){
       console.log($scope.newCat.catName);
+      console.log($scope.newCat.ownerName);
+      console.log($scope.newCat.catMailId);
+      console.log($scope.newCat.address);
+      console.log($scope.newCat.vetName);
   }
 })
 .controller('AccountCtrl', function($scope) {
