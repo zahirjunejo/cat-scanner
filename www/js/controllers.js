@@ -21,8 +21,6 @@ angular.module('starter.controllers', [])
   $scope.chat = Meows.get($stateParams.chatId);
 })
 .controller('NewCatCtrl', function($scope, Meows) {
-// This is my first controller for ionic
-
 })
 .controller('AccountCtrl', function($scope) {
   $scope.settings = {
