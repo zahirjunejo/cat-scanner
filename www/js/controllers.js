@@ -22,6 +22,10 @@ angular.module('starter.controllers', [])
 })
 .controller('NewCatCtrl', function($scope, Meows) {
   $scope.newCat = new Cat(); 
+
+  $scope.addCat = function(){
+      console.log($scope.newCat.catName);
+  }
 })
 .controller('AccountCtrl', function($scope) {
   $scope.settings = {

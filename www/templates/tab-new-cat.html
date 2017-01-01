@@ -1,18 +1,30 @@
 <ion-view view-title="Add Cat">
-  <ion-content class="padding">
+  <ion-content class="padding" >
   <!-- Ask the user for -->
   <!-- Cat Name -->
-    <label for="catname">Cat Name: </label><input id="catname"><br>
+  <div class="form-group">
+   <label for="catname">Cat Name: </label><input id="catname" ng-model="newCat.catName" class="form-control">
+  </div>
+    
   <!-- Cat Owner -->
-    <label for="ownername">Owner Name: </label><input id="ownername"><br>
+  <div class="form-group">
+    <label for="ownername">Owner Name: </label><input id="ownername" ng-model="newCat.ownerName" class="form-control">
+  </div>
   <!-- Cat Vet -->
-    <label for="vetname">Vet Name: </label><input id="vetname"><br>
+  <div class="form-group">
+    <label for="vetname">Vet Name: </label><input id="vetname" ng-model="newCat.vetName" class="form-control">
+  </div>
   <!-- Cat Email ([email]@catmail.com)-->
-    <label for="catmail">Catmail ID: <input id="catmail"> @catmail.com</label><br>
+  <div class="form-group">
+    <label for="catmail">Catmail ID: </label><input id="catmail" ng-model="newCat.catMailId" class="form-control">
+  </div>
+    
   <!-- Cat address -->
-    <label for="address">Address: </label><input id="address"><br>
-
-    <button>Add Cat</button>
+  <div class="form-group">
+    <label for="address">Address: </label><input id="address" ng-model="newCat.address" class="form-control"><br>
+  </div>
+    
+  <button ng-click="addCat()" class="btn btn-default">Add Cat</button>
 
   </ion-content>
 </ion-view>
