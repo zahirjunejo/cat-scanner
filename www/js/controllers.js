@@ -21,6 +21,7 @@ angular.module('starter.controllers', [])
   $scope.chat = Meows.get($stateParams.chatId);
 })
 .controller('NewCatCtrl', function($scope, Meows) {
+  $scope.newCat = new Cat(); 
 })
 .controller('AccountCtrl', function($scope) {
   $scope.settings = {
