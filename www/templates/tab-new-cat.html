@@ -2,29 +2,39 @@
   <ion-content class="padding" >
   <!-- Ask the user for -->
   <!-- Cat Name -->
+  <form>
   <div class="form-group">
-   <label for="catname">Cat Name: </label><input id="catname" ng-model="newCat.catName" class="form-control">
+   <label for="catname">Cat Name: </label><input id="catname" ng-model="newCat.catName" ng-init="" class="form-control">
   </div>
     
   <!-- Cat Owner -->
   <div class="form-group">
-    <label for="ownername">Owner Name: </label><input id="ownername" ng-model="newCat.ownerName" class="form-control">
+    <label for="ownername">Owner Name: </label><input id="ownername" ng-model="newCat.ownerName" ng-init="" class="form-control">
   </div>
   <!-- Cat Vet -->
   <div class="form-group">
-    <label for="vetname">Vet Name: </label><input id="vetname" ng-model="newCat.vetName" class="form-control">
+    <label for="vetname">Vet Name: </label><input id="vetname" ng-model="newCat.vetName" ng-init="" class="form-control">
   </div>
   <!-- Cat Email ([email]@catmail.com)-->
   <div class="form-group">
-    <label for="catmail">Catmail ID: </label><input id="catmail" ng-model="newCat.catMailId" class="form-control">
+    <label for="catmail">Catmail ID: </label><input id="catmail" ng-model="newCat.catMailId" ng-init="" class="form-control">
   </div>
     
   <!-- Cat address -->
   <div class="form-group">
-    <label for="address">Address: </label><input id="address" ng-model="newCat.address" class="form-control"><br>
+    <label for="address">Address: </label><input id="address" ng-model="newCat.address" ng-init="" class="form-control">
   </div>
     
   <button ng-click="addCat()" class="btn btn-default">Add Cat</button>
+  <h1>
 
+    <span class="label label-danger" ng-if="newCat.catName == '' || newCat.ownerName == '' || newCat.vetName == ''
+    || newCat.catMailId == '' || newCat.address == ''">A field is empty</span>
+
+    <span class="label label-success" ng-show="newCat.catName  && newCat.ownerName  && newCat.vetName
+    && newCat.catMailId  && newCat.address">All good</span>
+
+  </h1>
+  </form>
   </ion-content>
 </ion-view>

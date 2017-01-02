@@ -2,13 +2,16 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {
   $scope.style="body white";
-  $scope.changeTextColor = () =>{
-     if($scope.style == "body white"){
-      $scope.style = "body yellow";
-     }else{
+
+  $scope.changeTextWhite = () =>{
       $scope.style = "body white";
-     } 
   }
+  
+  $scope.changeTextYellow = () =>{
+      $scope.style = "body yellow";
+  }
+
+
 })
 
 .controller('ChatsCtrl', function($scope, Meows) {
