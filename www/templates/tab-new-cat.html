@@ -2,7 +2,7 @@
   <ion-content class="padding" >
   <!-- Ask the user for -->
   <!-- Cat Name -->
-  <form>
+  <form ng-submit="addCat()">
   <div class="form-group">
    <label for="catname">Cat Name: </label><input id="catname" ng-model="newCat.catName" ng-init="" class="form-control">
   </div>
@@ -25,7 +25,7 @@
     <label for="address">Address: </label><input id="address" ng-model="newCat.address" ng-init="" class="form-control">
   </div>
     
-  <button ng-click="addCat()" class="btn btn-default">Add Cat</button>
+  <input type="submit" class="btn btn-default">
   <h1>
 
     <span class="label label-danger" ng-if="newCat.catName == '' || newCat.ownerName == '' || newCat.vetName == ''
@@ -36,5 +36,9 @@
 
   </h1>
   </form>
+  <div ng-repeat="cat in catNames">
+    <p>{{ cat }} was added.</p>
+  </div>
+
   </ion-content>
 </ion-view>

@@ -34,13 +34,10 @@ angular.module('starter.controllers', [])
 })
 .controller('NewCatCtrl', function($scope, Meows) {
   $scope.newCat = new Cat(); 
+  $scope.catNames = [];
 
   $scope.addCat = function(){
-      console.log($scope.newCat.catName);
-      console.log($scope.newCat.ownerName);
-      console.log($scope.newCat.catMailId);
-      console.log($scope.newCat.address);
-      console.log($scope.newCat.vetName);
+      $scope.catNames.push($scope.newCat.catName);
   }
 })
 .controller('AccountCtrl', function($scope) {
